@@ -1,0 +1,213 @@
+@import "compass_twitter_bootstrap";
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+@import url(http://fonts.googleapis.com/css?family=Allura);
+
+/* Global Styles
+================================================== */
+
+body {
+  color: #000;
+  font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.5em;
+  font-weight: 300;
+  text-align: center;
+  overflow-x: hidden;
+  background-color: rgb(255,255,255);
+text-shadow: 0px 0px 25px #ffffff;
+        filter: dropshadow(color=#ffffff, offx=0, offy=0);
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease-out;
+  -moz-transition: color 0.3s ease-out;
+  -o-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+  &:hover {
+    color: #000;
+  }
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.44em;
+  font-weight: 300;
+  color: #000;
+  &.slogan {
+    font-size: 25px;
+    line-height: 1.44em;
+    font-weight: 300;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  margin: 20px 0;
+  color: #222;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 1.3091em;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 1.35em;
+}
+
+h3 {
+  font-size: 25px;
+  line-height: 1.44em;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 1.8em;
+}
+
+/* Individual Styles */
+
+header {
+  padding: 75px 0 0 0;
+}
+
+footer {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+p.copyright {
+  font-size: 12px;
+  text-align: right;
+}
+
+#twitter {
+    float: left;
+    width: 40px;
+    height: 40px;
+    background: url(../images/social-icons.png) 0 0 no-repeat;
+    background-position: -40px 0;
+    span {
+        display: none;
+    }
+}
+
+ul.social-icons {
+  li {
+    float: left;
+    list-style: none;
+    margin: 0 0 0 5px;
+  }
+  a {
+    float: left;
+    width: 40px;
+    height: 40px;
+    background: url(../images/social-icons.png) 0 0 no-repeat;
+    display: block;
+    position: relative;
+    &#rss {
+      background-position: 0 0;
+    }
+    &#twitter {
+      background-position: -40px 0;
+    }
+    &#email {
+      background-position: -80px 0;
+    }
+    &#vimeo {
+      background-position: -120px 0;
+    }
+    &#facebook {
+      background-position: -160px 0;
+    }
+    &#skype {
+      background-position: -200px 0;
+    }
+    &#forrst {
+      background-position: 0 -40px;
+    }
+    &#youtube {
+      background-position: -40px -40px;
+    }
+    &#flickr {
+      background-position: -80px -40px;
+    }
+    &#share-this {
+      background-position: -120px -40px;
+    }
+    &#digg {
+      background-position: -160px -40px;
+    }
+    &#google {
+      background-position: -200px -37px;
+    }
+  }
+}
+
+#ribbon {
+  color: white;
+  margin: 40px -500px 40px -500px !important;
+  padding: 20px 500px 0 500px;
+  background: url(../images/pattern.png) top left repeat;
+  opacity: 0.8;
+  filter: alpha(opacity = 80);
+  .thumbnail {
+    background-color: #ececec;
+    img {
+        padding-bottom: 0.6em;
+    }
+    a, a p {
+      font-size: 1.2em;
+      font-weight: 500;
+      line-height: 1.1em;
+      text-decoration: none;
+      small {
+        display: block;
+        font-size: 75%;
+        color: #2a2a2a;
+      }
+    }
+  }
+}
+
+.tweet_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  li {
+    overflow-y: auto;
+    overflow-x: hidden;
+    list-style-type: none;
+    a {
+      color: #222;
+    }
+  }
+  .tweet_avatar {
+    padding-right: 0;
+    float: left;
+  }
+}
+
+#ticker {
+  ul.tweet_list {
+    height: 4em;
+    overflow-y: hidden;
+  }
+  .tweet_list li {
+    height: 4em;
+  }
+  text-align: left;
+}
+
+#contact {
+    margin-top: 2em;
+    background-color: rgba(255, 255, 255, 0.5);
+}
