@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-# Time: Thu Nov 22 2012 13:04:36 GMT-0800 (PST)
+# Time: Sat Dec 01 2012 22:28:59 GMT-0800 (PST)
 # This manifest was created by confess.js, http://github.com/jamesgpearce/confess
 #
 # Retrieved URL: http://localhost:3501/
@@ -22,11 +22,10 @@ CACHE MANIFEST
 
 CACHE:
 http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js
-http://api.twitter.com/1/statuses/user_timeline.json?screen_name=brodkin&count=3&include_rts=1&page=1&callback=jQuery18307488576227333397_1353618245653&_=1353618245670
 http://localhost:3501/app/images/glyphicons-halflings-white.png?1353569532
 http://localhost:3501/app/images/glyphicons-halflings.png?1353569532
-http://localhost:3501/images/pattern.png
-http://localhost:3501/images/social-icons.png
+http://localhost:3501/images/5b01f822.social-icons.png
+http://localhost:3501/images/5e7f8539.pattern.png
 http://localhost:3501/scripts/vendor/supersized/img/back.png
 http://localhost:3501/scripts/vendor/supersized/img/bg-black.png
 http://localhost:3501/scripts/vendor/supersized/img/bg-hover.png
@@ -44,14 +43,14 @@ images/13b4fd8f.ribbon-github.png
 images/251de194.ribbon-bca.png
 images/2a1ad8eb.ribbon-behance.png
 images/bfb9e0dd.ribbon-linkedin.png
-images/bg/bg2.jpg
-images/bg/bg3.jpg
-images/bg/bg6.jpg
+images/bg/1d7258c4.bg6.jpg
+images/bg/d77c6f68.bg2.jpg
+images/bg/e397e7e2.bg3.jpg
+scripts/27f529a9.main.js
 scripts/7a7eb22d.plugins.js
-scripts/847e06fb.main.js
 scripts/vendor/supersized/css/supersized.css
 scripts/vendor/supersized/theme/supersized.shutter.css
-styles/f3f72f1a.main.css
+styles/1ef1baa7.main.css
 
 NETWORK:
 *

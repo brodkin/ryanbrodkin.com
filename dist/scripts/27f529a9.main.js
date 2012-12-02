@@ -22,6 +22,13 @@ jQuery(function($){
         });
 
         /* Background Slider */
+        var sliderImages = [];
+        $('#slider_images img').each(function (index, element) {
+            var src = $(element).attr('src');
+            var slideObj = {'image' : src};
+            sliderImages.push(slideObj);
+        });
+
         $.supersized({
             // Functionality
             slide_interval:   10000,
@@ -29,14 +36,7 @@ jQuery(function($){
             transition_speed:   700,
             // Components
             slide_links:   'blank',
-            slides:
-                [
-                    {image : 'images/bg/bg2.jpg'},
-                    {image : 'images/bg/bg3.jpg'},
-                    {image : 'images/bg/bg5.jpg'},
-                    {image : 'images/bg/bg6.jpg'}
-                ]
-
+            slides: sliderImages
         });
     });
 
