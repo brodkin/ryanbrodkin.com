@@ -1,137 +1,128 @@
+/* Global Styles */
 @import "compass_twitter_bootstrap";
 @import "compass_twitter_bootstrap_responsive.scss";
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-@import url(http://fonts.googleapis.com/css?family=Allura);
-
-/* Global Styles */
+@import url("http://fonts.googleapis.com/css?family=Allura");
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700");
 
 body {
+  background-color: rgb(255, 255, 255);
   color: #000;
+  filter: dropshadow(color= #fff, offx=0, offy=0);
   font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
   font-size: 12px;
-  line-height: 1.5em;
   font-weight: 300;
-  text-align: center;
+  line-height: 1.5em;
+  margin: 0px !important;
   overflow-x: hidden;
-  background-color: rgb(255,255,255);
-  text-shadow: 0px 0px 25px #ffffff;
-  filter: dropshadow(color=#ffffff, offx=0, offy=0);
-  margin: 0 0 !important;
-  padding: 0 0 !important;
+  padding: 0px !important;
+  text-align: center;
+  text-shadow: 0px 0px 25px #fff;
 }
-
 a {
-  color: #222;
-  text-decoration: none;
-  -webkit-transition: color 0.3s ease-out;
   -moz-transition: color 0.3s ease-out;
   -o-transition: color 0.3s ease-out;
+  -webkit-transition: color 0.3s ease-out;
+  color: #222;
+  text-decoration: none;
   transition: color 0.3s ease-out;
   &:hover {
     color: #000;
   }
 }
-
 p {
-  font-size: 16px;
-  line-height: 1.44em;
-  font-weight: 300;
   color: #000;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.44em;
   &.slogan {
     font-size: 25px;
-    line-height: 1.44em;
     font-weight: 300;
+    line-height: 1.44em;
   }
 }
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 300;
-  margin: 20px 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #222;
+  font-weight: 300;
+  margin: 20px 0px;
 }
-
 h1 {
   font-size: 60px;
   line-height: 1.3091em;
 }
-
 h2 {
   font-size: 40px;
   line-height: 1.35em;
 }
-
 h3 {
   font-size: 25px;
   line-height: 1.44em;
 }
-
 h4 {
   font-size: 20px;
   line-height: 1.8em;
+  /* Individual Styles */
 }
-
-/* Individual Styles */
-
 header {
-  padding: 75px 0 0 0;
+  padding: 75px 0px 0px;
 }
-
 footer {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  margin-top: 30px;
   margin-bottom: 10px;
+  margin-top: 30px;
   text-align: left;
 }
-
 p.copyright {
   font-size: 12px;
   text-align: right;
 }
-
 #twitter {
+  background-position: -40px 0px;
+  background: url("/images/social-icons.png") -40px 0px no-repeat;
   float: left;
-  width: 40px;
   height: 40px;
-  background: url(/images/social-icons.png) 0 0 no-repeat;
-  background-position: -40px 0;
+  width: 40px;
   span {
     display: none;
   }
 }
-
 ul.social-icons {
   li {
     float: left;
     list-style: none;
-    margin: 0 0 0 5px;
+    margin: 0px 0px 0px 5px;
   }
   a {
-    float: left;
-    width: 40px;
-    height: 40px;
-    background: url(/images/social-icons.png) 0 0 no-repeat;
+    background: url("/images/social-icons.png") 0px 0px no-repeat;
     display: block;
+    float: left;
+    height: 40px;
     position: relative;
+    width: 40px;
     &#rss {
-      background-position: 0 0;
+      background-position: 0px 0px;
     }
     &#twitter {
-      background-position: -40px 0;
+      background-position: -40px 0px;
     }
     &#email {
-      background-position: -80px 0;
+      background-position: -80px 0px;
     }
     &#vimeo {
-      background-position: -120px 0;
+      background-position: -120px 0px;
     }
     &#facebook {
-      background-position: -160px 0;
+      background-position: -160px 0px;
     }
     &#skype {
-      background-position: -200px 0;
+      background-position: -200px 0px;
     }
     &#forrst {
-      background-position: 0 -40px;
+      background-position: 0px -40px;
     }
     &#youtube {
       background-position: -40px -40px;
@@ -150,52 +141,49 @@ ul.social-icons {
     }
   }
 }
-
 #ribbon {
+  background: url("/images/pattern.png") top left repeat;
   color: white;
-  margin: 40px -100px 40px -100px !important;
-  padding: 20px 100px 0 100px;
-  background: url(/images/pattern.png) top left repeat;
-  opacity: 0.8;
   filter: alpha(opacity = 80);
+  margin: 40px -100px 40px -100px !important;
+  opacity: 0.8;
+  padding: 20px 100px 0px;
   .thumbnail {
     background-color: #ececec;
     img {
-        padding-bottom: 0.6em;
+      padding-bottom: 0.6em;
     }
-    a, a p {
+    a,
+    a p {
       font-size: 1.2em;
       font-weight: 500;
       line-height: 1.1em;
       text-decoration: none;
       small {
+        color: #2a2a2a;
         display: block;
         font-size: 75%;
-        color: #2a2a2a;
       }
     }
   }
 }
-
 .tweet_list {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
   overflow-y: hidden;
+  padding: 0px;
   li {
-    overflow-y: auto;
-    overflow-x: hidden;
     list-style-type: none;
+    overflow: hidden auto;
     a {
       color: #222;
     }
   }
   .tweet_avatar {
-    padding-right: 0;
     float: left;
+    padding-right: 0px;
   }
 }
-
 #ticker {
   ul.tweet_list {
     height: 4em;
@@ -206,12 +194,10 @@ ul.social-icons {
   }
   text-align: left;
 }
-
 #contact {
-    margin-top: 2em;
-    background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-top: 2em;
 }
-
 #supersized-loader {
   top: 30%;
 }
