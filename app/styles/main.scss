@@ -1,6 +1,7 @@
+@import 'sass-bootstrap/lib/bootstrap';
+@import 'sass-bootstrap/lib/responsive';
+
 /* Global Styles */
-@import "compass_twitter_bootstrap";
-@import "compass_twitter_bootstrap_responsive.scss";
 @import url("http://fonts.googleapis.com/css?family=Allura");
 @import url("http://fonts.googleapis.com/css?family=Lato:300,400,700");
 
@@ -180,6 +181,7 @@ ul.social-icons {
   background-color: rgba(255, 255, 255, 0.5);
   margin-top: 2em;
 }
-#supersized-loader {
+#supersized-loader, #supersized li.image-loading {
   top: 30%;
+  background-image: none !important;
 }
