@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "dependencies": {
     "sass-bootstrap": "~2.3.0",
-    "jquery": "~1.9.1"
+    "jquery": "~1.9.1",
+    "supersized": "git://github.com/buildinternet/supersized.git",
+    "tweet": "git://github.com/seaofclouds/tweet.git#~2.2.0"
   },
   "devDependencies": {}
 }
