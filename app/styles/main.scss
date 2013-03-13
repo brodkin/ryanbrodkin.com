@@ -70,6 +70,9 @@ h4 {
 }
 header {
   padding: 75px 0px 0px;
+  p {
+    white-space: nowrap;
+  }
 }
 footer {
   font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -128,16 +131,17 @@ ul.social-icons {
   background: url("/images/pattern.png") top left repeat;
   color: white;
   filter: alpha(opacity = 80);
-  margin: 40px -100px 40px -100px !important;
+  margin: 40px -150px 40px -150px !important;
   opacity: 0.8;
-  padding: 20px 100px 0px;
+  padding: 20px 150px 0px;
   .thumbnail {
     background-color: #ececec;
     img {
       padding-bottom: 0.6em;
+      width: 100%;
     }
     a,
-    a p {
+    a span {
       font-size: 1.2em;
       font-weight: 500;
       line-height: 1.1em;
