@@ -90,7 +90,7 @@ module.exports = function (grunt) {
         },
         clean: {
             dist: ['.tmp', '<%= yeoman.dist %>/*'],
-            server: '.tmp'
+            server: ['.tmp', '<%= yeoman.app %>/styles/font']
         },
         jshint: {
             options: {
@@ -229,6 +229,25 @@ module.exports = function (grunt) {
                         '*.{ico,txt,pdf}',
                         '.htaccess'
                     ]
+                },{
+                    expand: true,
+                    dot: true,
+                    cwd: '<%= yeoman.app %>/components/Font-Awesome/font',
+                    dest: '<%= yeoman.dist %>/styles/font',
+                    src: [
+                        '*.{eot,svg,ttf,woff,otf}'
+                    ]
+                }]
+            },
+            server: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    cwd: '<%= yeoman.app %>/components/Font-Awesome/font',
+                    dest: '<%= yeoman.app %>/styles/font',
+                    src: [
+                        '*.{eot,svg,ttf,woff,otf}'
+                    ]
                 }]
             }
         },
@@ -250,6 +269,7 @@ module.exports = function (grunt) {
             'clean:server',
             'coffee:dist',
             'compass:server',
+            'copy:server',
             'livereload-start',
             'connect:livereload',
             'open',
