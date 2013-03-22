@@ -131,9 +131,12 @@ ul.social-icons {
   background: url("/images/pattern.png") top left repeat;
   color: white;
   filter: alpha(opacity = 80);
-  margin: 40px -150px 40px -150px !important;
   opacity: 0.8;
-  padding: 20px 150px 0px;
+  margin: 0 1rem 0 1rem !important;
+  padding: 15px 1rem 0px 1rem !important;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   .thumbnail {
     background-color: #ececec;
     img {
@@ -181,9 +184,15 @@ ul.social-icons {
   }
   text-align: left;
 }
-#contact {
+#contact > div {
   background-color: rgba(255, 255, 255, 0.5);
   margin-top: 2em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+#supersized {
+  margin-left: 0 !important;
 }
 #supersized-loader, #supersized li.image-loading {
   top: 30%;
