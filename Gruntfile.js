@@ -229,7 +229,7 @@ module.exports = function (grunt) {
                         '*.{ico,txt,pdf}',
                         '.htaccess'
                     ]
-                },{
+                }, {
                     expand: true,
                     dot: true,
                     cwd: '<%= yeoman.app %>/components/Font-Awesome/font',
