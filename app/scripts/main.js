@@ -14,7 +14,7 @@ jQuery(function () {
         var ul = jQuery(this).find('.tweet_list');
         var ticker = function () {
             setTimeout(function () {
-                ul.find('li:first').animate({marginTop: '-4em'}, 500, function () {
+                ul.find('li:first').animate({marginTop: '-5em'}, 500, function () {
                     jQuery(this).detach().appendTo(ul).removeAttr('style');
                 });
                 ticker();

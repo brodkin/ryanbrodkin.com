@@ -45,12 +45,7 @@ p {
     line-height: 1.44em;
   }
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   color: #222;
   font-weight: 300;
   margin: 20px 0px;
@@ -70,7 +65,6 @@ h3 {
 h4 {
   font-size: 20px;
   line-height: 1.8em;
-  /* Individual Styles */
 }
 header {
   padding: 75px 0px 0px;
@@ -83,10 +77,10 @@ footer {
   margin-bottom: 10px;
   margin-top: 30px;
   text-align: left;
-}
-p.copyright {
-  font-size: 12px;
-  text-align: right;
+  .copyright {
+    font-size: 12px;
+    text-align: right;
+  }
 }
 #twitter {
   i {
@@ -94,11 +88,33 @@ p.copyright {
     float: left;
     font-size: 1.3rem;
     text-decoration: none;
-    padding: 0.4rem 0.7rem 0 0;
+    padding: 0.4rem 0.7rem 0 0.4rem;
+  }
+  #ticker {
+    ul.tweet_list {
+      height: 5em;
+      overflow: hidden;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li .tweet_text {
+        display: block;
+        height: 5em;
+        text-overflow: ellipsis;
+        list-style-type: none;
+        overflow: hidden;
+        padding-right: 0.5em;
+        a {
+          border-bottom: 1px dotted #000
+        }
+      }
+    }
+
+    text-align: left;
   }
 }
 .social-icons {
-  padding-top: 0.4rem;
+  margin: 0.4rem 0.4rem 0 0;
   li {
     float: left;
     list-style: none;
@@ -116,6 +132,25 @@ p.copyright {
   }
   opacity: 0.9;
 }
+@media (max-width: 480px) {
+  .social-icons {
+    display: block;
+    margin: 1em auto 0;
+    float: none;
+    li {
+      display: inline-block;
+      float: none;
+      margin: 0;
+      i {
+        font-size: 150%;
+        margin-right: 0.5em;
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
 #ribbon {
   background: url("/images/pattern.png") top left repeat;
   color: white;
@@ -130,8 +165,7 @@ p.copyright {
       padding-bottom: 0.6em;
       width: 100%;
     }
-    a,
-    a span {
+    a, a span {
       font-size: 1.2em;
       font-weight: 500;
       line-height: 1.1em;
@@ -144,37 +178,12 @@ p.copyright {
     }
   }
 }
-.tweet_list {
-  list-style: none;
-  margin: 0px;
-  overflow-y: hidden;
-  padding: 0px;
-  li {
-    list-style-type: none;
-    overflow: hidden auto;
-    a {
-      color: #222;
-    }
-  }
-  .tweet_avatar {
-    float: left;
-    padding-right: 0px;
-  }
-}
-#ticker {
-  ul.tweet_list {
-    height: 4em;
-    overflow-y: hidden;
-  }
-  .tweet_list li {
-    height: 4em;
-  }
-  text-align: left;
-}
 #contact > div {
   background-color: rgba(255, 255, 255, 0.5);
-  margin-top: 2em;
   @include border-radius(5px);
+  .form {
+    margin: 0 1em;
+  }
 }
 #supersized {
   margin-left: 0 !important;

@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Ryan Brodkin :: Los Angeles Web Developer/Sound Designer for Theatre</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="styles/supersized.css">
 </head>
@@ -53,11 +53,11 @@
                     </li>
                     <li class="span3">
                         <div class="thumbnail">
-                            <a href="http://www.behance.net/brodkin" title="Bēhance Portfolio">
-                                <img src="images/ribbon-behance.png" alt="">
+                            <a href="http://portfolio.ryanbrodkin.com/" title="Bēhance Portfolio">
+                                <img src="images/ribbon-portfolio.png" alt="">
                                 <span>
-                                    Portfolio
-                                    <small>at Bēhance</small>
+                                    My Portfolio
+                                    <small>Web Design and Development</small>
                                 </span>
                             </a>
                         </div>
@@ -67,8 +67,8 @@
                             <a href="https://github.com/brodkinca" title="Github Projects">
                                 <img src="images/ribbon-github.png" alt="">
                                 <span>
-                                    My Code
-                                    <small>on GitHub</small>
+                                    My Projects
+                                    <small>on GitHub.com</small>
                                 </span>
                             </a>
                         </div>
@@ -88,25 +88,25 @@
                     <li>
                         <a href="https://www.facebook.com/brodkin">
                             <i class="icon-facebook"></i>
-                            <span>Facebook</span>
+                            <span class="hidden-phone">Facebook</span>
                         </a>
                     </li>
                     <li>
                         <a href="https://plus.google.com/110319804729794977107">
                             <i class="icon-google-plus-sign"></i>
-                            <span>Google+</span>
+                            <span class="hidden-phone">Google+</span>
                         </a>
                     </li>
                     <li>
                         <a href="http://www.linkedin.com/in/brodkin">
                             <i class="icon-linkedin-sign"></i>
-                            <span>LinkedIn</span>
+                            <span class="hidden-phone">LinkedIn</span>
                         </a>
                     </li>
                     <li>
                         <a href="#contact">
                             <i class="icon-envelope-alt"></i>
-                            <span>Email</span>
+                            <span class="hidden-phone">Email</span>
                         </a>
                     </li>
                 </ul>
@@ -116,8 +116,8 @@
             <div class="span8 offset2">
                 <h2>Looking to get in touch?</h2>
                 <h3>Send me a message!</h3>
-                <div id="wufoo-z7x4m1">
-                Fill out my <a href="http://brodkin.wufoo.com/forms/z7x4m1">contact form</a>.
+                <div id="wufoo-z7x4m1" class="form">
+                    Fill out my <a href="http://brodkin.wufoo.com/forms/z7x4m1">contact form</a>.
                 </div>
             </div>
         </section>
@@ -140,10 +140,18 @@
     <script src="scripts/plugins.js"></script>
     <script src="scripts/main.js"></script>
     <script>
-        var _gaq=[['_setAccount','UA-36712790-1'],['_trackPageview']];
-        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
+        var _gaq = _gaq || [];
+        var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+        _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+        _gaq.push(['_setAccount', 'UA-36712790-1']);
+        _gaq.push(['_setDomainName', 'ryanbrodkin.com']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
     </script>
 </body>
 </html>
