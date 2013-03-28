@@ -13,15 +13,23 @@
         <!-- endbuild -->
 </head>
 <body>
-    <div class="container">
+    <div class="container" itemscope itemtype="http://schema.org/Person">
         <header class="row">
             <img src="images/avatar.png" alt="Photo of Ryan">
+            <img src="//www.gravatar.com/avatar/179947610423bad90fa732c2a5ff9d4f?s=100" alt="Avatar" class="hide" itemprop="image">
             <h2>
-                Hello, my name is&nbsp;Ryan.
+                Hello, my name is&nbsp;<span itemprop="name">Ryan<span class="hide"> Brodkin</span></span>.
             </h2>
             <p class="slogan">
-                I'm a freelance <wbr>web developer and designer.
+                I'm a <span itemprop="title">Freelance <wbr>Web Developer and Designer</span>.
             </p>
+            <span class="hide" itemprop="gender">Male</span>
+            <p class="hide" itemprop="address" itemscope
+      itemtype="http://schema.org/PostalAddress">
+                <span itemprop="addressLocality">Los Angeles</span>,
+                <span itemprop="addressRegion">CA</span>
+            </p>
+            <span itemprop="affiliation" class="hide">Brodkin CyberArts</span>
             <p>
                 Explore the links below to <wbr>learn more about me and my work.
             </p>
@@ -34,7 +42,7 @@
                 <ul class="thumbnails">
                     <li class="span3">
                         <div class="thumbnail">
-                            <a href="http://brodkinca.com/" title="My Company">
+                            <a href="http://brodkinca.com/" title="My Company" itemprop="url">
                                 <img src="images/ribbon-bca.png" alt="">
                                 <span>
                                     Brodkin CyberArts
@@ -45,7 +53,7 @@
                     </li>
                     <li class="span3">
                         <div class="thumbnail">
-                            <a href="resume.pdf">
+                            <a href="resume.pdf" itemprop="url">
                                 <img src="images/ribbon-resume.png" alt="">
                                 <span>
                                     Résumé
@@ -56,7 +64,7 @@
                     </li>
                     <li class="span3">
                         <div class="thumbnail">
-                            <a href="http://portfolio.ryanbrodkin.com/" title="Bēhance Portfolio">
+                            <a href="http://portfolio.ryanbrodkin.com/" title="Bēhance Portfolio" itemprop="url">
                                 <img src="images/ribbon-portfolio.png" alt="">
                                 <span>
                                     My Portfolio
@@ -67,7 +75,7 @@
                     </li>
                     <li class="span3">
                         <div class="thumbnail">
-                            <a href="https://github.com/brodkinca" title="Github Projects">
+                            <a href="https://github.com/brodkinca" title="Github Projects" itemprop="url">
                                 <img src="images/ribbon-github.png" alt="">
                                 <span>
                                     My Projects
@@ -81,7 +89,7 @@
         </section>
         <section id="main" class="row">
             <div id="twitter" class="span6">
-                <a href="https://twitter.com/brodkin">
+                <a href="https://twitter.com/brodkin" itemprop="url">
                     <i class="icon-twitter"></i>
                 </a>
                 <div id="ticker"></div>
@@ -89,19 +97,19 @@
             <div class="span6">
                 <ul class="social-icons pull-right">
                     <li>
-                        <a href="https://www.facebook.com/brodkin">
+                        <a href="https://www.facebook.com/brodkin" itemprop="url">
                             <i class="icon-facebook"></i>
                             <span class="hidden-phone">Facebook</span>
                         </a>
                     </li>
                     <li>
-                        <a href="https://plus.google.com/110319804729794977107">
+                        <a href="https://plus.google.com/110319804729794977107" rel="publisher" itemprop="url">
                             <i class="icon-google-plus-sign"></i>
                             <span class="hidden-phone">Google+</span>
                         </a>
                     </li>
                     <li>
-                        <a href="http://www.linkedin.com/in/brodkin">
+                        <a href="http://www.linkedin.com/in/brodkin" itemprop="url">
                             <i class="icon-linkedin-sign"></i>
                             <span class="hidden-phone">LinkedIn</span>
                         </a>
