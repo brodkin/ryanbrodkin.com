@@ -51,7 +51,7 @@ jQuery(function () {
             'async': true,
             'header': 'hide'
         };
-        s.src = ('https:' === d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
+        s.src = ('https:' === d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
         s.onload = s.onreadystatechange = function () {
             var rs = this.readyState;
             if (rs) {
