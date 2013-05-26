@@ -82,11 +82,12 @@ footer {
 }
 #twitter {
   i {
+    color: #000;
     display: block;
     float: left;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     text-decoration: none;
-    padding: 0.4rem 0.7rem 0 0.4rem;
+    padding: 0.4rem 0.7rem 0 0.2rem;
   }
   #ticker {
     ul.tweet_list {
@@ -99,9 +100,11 @@ footer {
         display: block;
         height: 5em;
         text-overflow: ellipsis;
+        text-shadow: none;
+        font-weight: 500;
         list-style-type: none;
         overflow: hidden;
-        padding-right: 0.5em;
+        padding: 0 0.5em 0 0;
         a {
           border-bottom: 1px dotted #000
         }
@@ -119,13 +122,17 @@ footer {
     margin: 0px 0px 0px 5px;
   }
   a {
+    color: #000;
     display: block;
     float: left;
     font-size: 1.3rem;
     text-decoration: none;
     span {
       font-size: 0.8rem;
-      padding-right: 0.4rem;
+      font-weight: 500;
+      padding: 0 0.4rem 0 0.1rem;
+      position: relative;
+      top: -0.2rem;
     }
   }
   opacity: 0.9;
@@ -174,6 +181,31 @@ footer {
         font-size: 75%;
       }
     }
+  }
+}
+#klout {
+  margin: 1em 0;
+  text-align: left;
+  #klout_leader {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+    position: relative;
+    left: 0.6rem;
+  }
+  img {
+    position: relative;
+    left: 0.2rem;
+    top: 0.4rem;
+  }
+  li {
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: inline-block;
+    padding: 0.4em;
+    background-color: rgba(255, 255, 255, 0.2);
+    list-style: none;
+    margin: 0 0.5rem 0.3rem 0;
+    @include border-radius(5px);
   }
 }
 #contact > div {

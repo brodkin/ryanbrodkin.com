@@ -37,7 +37,6 @@ window.jQuery(function ($) {
         slides: sliderImages
     });
 
-
     /* Contact Form */
     var z7x4m1;
     (function (d, t) {
@@ -69,4 +68,19 @@ window.jQuery(function ($) {
         par.insertBefore(s, scr);
     })(document, 'script');
 
+    /* Klout */
+    var kloutList = $('<ul>');
+    var kloutTopic = $('<li>');
+    $.ajax({
+        url: 'http://api.klout.com/v2/user.json/957014930614264757/topics?key=s8bjkjsjvbszpvxmqaudtrgx',
+        success: function (data) {
+            $.each(data, function (i, topic) {
+                var kloutTopicEntry = kloutTopic.clone();
+                kloutTopicEntry.text(topic.displayName);
+                kloutList.append(kloutTopicEntry);
+            });
+        },
+        dataType: 'jsonp'
+    });
+    $('#klout_topics').html(kloutList);
 });
