@@ -1,21 +1,19 @@
-/*global jQuery:false, WufooForm:false */
-
-jQuery(function () {
+window.jQuery(function ($) {
     'use strict';
 
     /* Tweet Ticker */
-    jQuery('#ticker').tweet({
+    $('#ticker').tweet({
         username: 'brodkin',
         page: 1,
         count: 3,
         loading_text: 'Loading recent tweets...',
         template: '{text}'
     }).bind('loaded', function () {
-        var ul = jQuery(this).find('.tweet_list');
+        var ul = $(this).find('.tweet_list');
         var ticker = function () {
             setTimeout(function () {
                 ul.find('li:first').animate({marginTop: '-5em'}, 500, function () {
-                    jQuery(this).detach().appendTo(ul).removeAttr('style');
+                    $(this).detach().appendTo(ul).removeAttr('style');
                 });
                 ticker();
             }, 5000);
@@ -25,13 +23,13 @@ jQuery(function () {
 
     /* Background Slider */
     var sliderImages = [];
-    jQuery('#slider_images img').each(function (index, element) {
-        var src = jQuery(element).attr('src');
+    $('#slider_images img').each(function (index, element) {
+        var src = $(element).attr('src');
         var slideObj = {'image' : src};
         sliderImages.push(slideObj);
     });
 
-    jQuery.supersized({
+    $.supersized({
         slide_interval:   10000,
         transition:   1,
         transition_speed:   700,
@@ -62,7 +60,7 @@ jQuery(function () {
                 }
             }
             try {
-                z7x4m1 = new WufooForm();
+                z7x4m1 = new window.WufooForm();
                 z7x4m1.initialize(options);
                 z7x4m1.display();
             } catch (e) {}

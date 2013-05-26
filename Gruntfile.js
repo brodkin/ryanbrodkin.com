@@ -1,17 +1,12 @@
-// Generated on 2013-03-09 using generator-webapp 0.1.5
-'use strict';
 var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
 var mountFolder = function (connect, dir) {
+    'use strict';
     return connect.static(require('path').resolve(dir));
 };
 
-// # Globbing
-// for performance reasons we're only matching one level down:
-// 'test/spec/{,*/}*.js'
-// use this if you want to match all subfolders:
-// 'test/spec/**/*.js'
-
 module.exports = function (grunt) {
+    'use strict';
+
     // load all grunt tasks
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
@@ -24,14 +19,6 @@ module.exports = function (grunt) {
     grunt.initConfig({
         yeoman: yeomanConfig,
         watch: {
-            coffee: {
-                files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
-                tasks: ['coffee:dist']
-            },
-            coffeeTest: {
-                files: ['test/spec/{,*/}*.coffee'],
-                tasks: ['coffee:test']
-            },
             compass: {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
                 tasks: ['compass']
@@ -49,7 +36,6 @@ module.exports = function (grunt) {
         connect: {
             options: {
                 port: 9000,
-                // change this to '0.0.0.0' to access the server from outside
                 hostname: '0.0.0.0'
             },
             livereload: {
@@ -89,8 +75,7 @@ module.exports = function (grunt) {
             }
         },
         clean: {
-            dist: ['.tmp', '<%= yeoman.dist %>/*'],
-            server: ['.tmp', '<%= yeoman.app %>/styles/font']
+            dist: ['.tmp', '<%= yeoman.dist %>/*']
         },
         jshint: {
             options: {
@@ -102,35 +87,6 @@ module.exports = function (grunt) {
                 '!<%= yeoman.app %>/scripts/vendor/*',
                 'test/spec/{,*/}*.js'
             ]
-        },
-        mocha: {
-            all: {
-                options: {
-                    run: true,
-                    urls: ['http://localhost:<%= connect.options.port %>/index.html']
-                }
-            }
-        },
-        coffee: {
-            dist: {
-                files: [{
-                    // rather than compiling multiple files here you should
-                    // require them into your main .coffee file
-                    expand: true,
-                    cwd: '<%= yeoman.app %>/scripts',
-                    src: '*.coffee',
-                    dest: '.tmp/scripts',
-                    ext: '.js'
-                }]
-            },
-            test: {
-                files: [{
-                    expand: true,
-                    cwd: '.tmp/spec',
-                    src: '*.coffee',
-                    dest: 'test/spec'
-                }]
-            }
         },
         compass: {
             options: {
@@ -149,12 +105,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-        // not used since Uglify task does concat,
-        // but still available if needed
-        /*concat: {
-            dist: {}
-        },*/
-
         uglify: {
             dist: {
                 files: {
@@ -200,7 +150,7 @@ module.exports = function (grunt) {
         htmlmin: {
             dist: {
                 options: {
-                    /*removeCommentsFromCDATA: true,
+                    removeCommentsFromCDATA: true,
                     // https://github.com/yeoman/grunt-usemin/issues/44
                     //collapseWhitespace: true,
                     collapseBooleanAttributes: true,
@@ -208,7 +158,7 @@ module.exports = function (grunt) {
                     removeRedundantAttributes: true,
                     useShortDoctype: true,
                     removeEmptyAttributes: true,
-                    removeOptionalTags: true*/
+                    removeOptionalTags: true
                 },
                 files: [{
                     expand: true,
@@ -229,25 +179,6 @@ module.exports = function (grunt) {
                         '*.{ico,txt,pdf}',
                         '.htaccess'
                     ]
-                }, {
-                    expand: true,
-                    dot: true,
-                    cwd: '<%= yeoman.app %>/components/Font-Awesome/font',
-                    dest: '<%= yeoman.dist %>/styles/font',
-                    src: [
-                        '*.{eot,svg,ttf,woff,otf}'
-                    ]
-                }]
-            },
-            server: {
-                files: [{
-                    expand: true,
-                    dot: true,
-                    cwd: '<%= yeoman.app %>/components/Font-Awesome/font',
-                    dest: '<%= yeoman.app %>/styles/font',
-                    src: [
-                        '*.{eot,svg,ttf,woff,otf}'
-                    ]
                 }]
             }
         },
@@ -266,10 +197,7 @@ module.exports = function (grunt) {
         }
 
         grunt.task.run([
-            'clean:server',
-            'coffee:dist',
             'compass:server',
-            'copy:server',
             'livereload-start',
             'connect:livereload',
             'open',
@@ -277,17 +205,8 @@ module.exports = function (grunt) {
         ]);
     });
 
-    grunt.registerTask('test', [
-        'clean:server',
-        'coffee',
-        'compass',
-        'connect:test',
-        'mocha'
-    ]);
-
     grunt.registerTask('build', [
         'clean:dist',
-        'coffee',
         'compass:dist',
         'useminPrepare',
         'imagemin',
@@ -301,7 +220,6 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', [
         'jshint',
-        'test',
         'build'
     ]);
 };
